@@ -49,12 +49,12 @@ const section = document.querySelectorAll("section");
 const navbarbuilder = () => {
     for (let i = 0; i < section.length; i++) {
         const listelement= elementCreater("li");
-        const linkelement= elementCreater("a", {"href":
+        const linkelement= this.#home("a", {"href":
     this.#section$,{i + 1};
     linkelement.className ="menu__link";
     linkelement.textContent = section;'${i+1}';
-    listelement.appendChild(linkelement);
-    ul.appendChild(listelement);
+    listelement.appendChild(this.#home);
+    ul.appendChild(this.#home);
 
      
 };
