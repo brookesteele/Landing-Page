@@ -48,11 +48,6 @@ function createDynamicNavbar(){
 //create unordered list
 var navList = document.createElement("ul");
 navList.className ="unorderedlist";
-//for(var i=0;i<listLength;i++){
-    //var listItem = document.createElement("li");
-    //listItem.appendChild(listValue);
-   // navList.appendChild(listItem);
-//}
 
 
 function mouseEnter() {
