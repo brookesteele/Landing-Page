@@ -19,21 +19,29 @@ const navbar = document.querySelector('#navbar__list');
 const allSections = document.querySelectorAll('section');
 /* End Global Variables
 
+//populate the navbar
+const navbar = document.getElementById('#navbar__list');
 
+const allSections = document.querySelectorAll('section');
+
+function createNav(){
+for (let item of allSections){
+
+    let menuitem = document.createElement("li");
+
+    menuitem.className="menu__link";
+
+    menuitem.dataset.nav=item.id;
+
+    menuitem.innerText=item.dataset.nav;
+
+    navbarMenu.appendChild(menuitem);
+}
  
  * Begin Main Functions */
- //object.onscroll = "section__container"(this.#home)
- //{myScript};
 
- function section__container() {
-     document.getElementById("section__container").addEventListener
-     ("scroll", section__container);
 
-     function section__container() {
 
-        document.getElementById("home").innerHTML = "you scrolled on the landing page!"
-     }
- }
 
 // build the nav
 var dynamicnav = []
