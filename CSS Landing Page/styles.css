@@ -11,79 +11,22 @@
 
 /* ---- Base Rules ---- */
 
-/*styling the buttons*/
-.button {
-    background-color: purple;
-    color: white;
-    border: black;
-    padding: 16px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;  
-     
-}
-
-.home {border-radius: 12px;}
-.one {border-radius: 12px;}
-.two {border-radius: 12px;}
-.three {border-radius: 12px;}
-.four {border-radius: 12px;} 
-
-.home {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-}
-.home:hover {
-    background-color: orange;
+a{
+    text-decoration: none;
     color: white;
 }
 
-.one {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+.navbar__menu{
+    background-color: lightgreen;
 }
 
-.one:hover {
-    background-color: orange;
-    color: white;
+ul{
+    display: flex;
 }
 
-.two {
-    background-color: white;
-    color: black;
-    border: 2px solid black;  
+a:hover{
+    background-color: lightskyblue;
 }
-
-.two:hover {
-    background-color: orange;
-    color: white;
-}
-
-.three {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-}
-.three:hover {
-    background-color: orange;
-    color: white;
-}
-
-.four {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-}
-
-.four:hover {
-    background-color: orange;
-    color: white;
-}
-
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -118,12 +61,12 @@ h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
-    color:orange;
+    color:lightgreen;
 }
 
 p {
     line-height: 1.6em;
-    color: orange;
+    color: lightgreen;
 }
 
 /* ---- Layout Rules ---- */
