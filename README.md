@@ -7,7 +7,7 @@ HTML,
 CSS, 
 JavaScript
 
-Features
+Features:
 Dynamic Navigation, 
 Page Scrolling
 
