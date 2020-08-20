@@ -38,18 +38,12 @@ function createNav(){
   
         
 //listening for scrolling
-
-
-
-
 // Add class 'active' to section when near top of viewport
-
 
 /**
  * End Main Functions
  * Begin Events */
 document.getElementById("firstbutton").addEventListener("click", function() {
-    console.log('the first button was clicked')
     document.getElementById('section1').scrollIntoView({behavior: "smooth"})
 })
 document.getElementById('secondbutton').addEventListener("click", function() {
