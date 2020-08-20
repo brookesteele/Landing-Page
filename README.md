@@ -3,12 +3,12 @@ Project:
 Landing Page 
 
 Languages:
-HTML
-CSS 
+HTML,
+CSS, 
 JavaScript
 
 Features
-Dynamic Navigation 
+Dynamic Navigation, 
 Page Scrolling
 
 Company:
