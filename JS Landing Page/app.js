@@ -15,10 +15,14 @@
 
 /**
  * Define Global Variables */
+const box = document.querySelector("div.landing__container");
+const rect = landing__container.getBoundingClientRect();
+console.log(rect);
 /* End Global Variables*/
 
+
  //populate the navbar
-const navbar = document.getElementById('#navbar__list');
+const navbar = document.getElementById('navbar__list');
 
 const allSections = document.querySelectorAll('section');
 
@@ -28,44 +32,24 @@ function createNav(){
         menuitem.className="menu__link";
         menuitem.dataset.nav=item.id;
         menuitem.innerText=item.dataset.nav;
-        navbarMenu.appendChild(menuitem);
+
+        // addingclick even listenr on Nav link
+        menuitem.addEventListener('click', function () {
+            item.scrollIntoView({behavior: "smooth"})
+        })
+        navbar.appendChild(menuitem);
     }
 
     createNav()
- 
- * Begin Main Functions */
-
-  
-        
-//listening for scrolling
-// Add class 'active' to section when near top of viewport
-
-/**
- * End Main Functions
- * Begin Events */
-document.getElementById("firstbutton").addEventListener("click", function() {
-    document.getElementById('section1').scrollIntoView({behavior: "smooth"})
-})
-document.getElementById('secondbutton').addEventListener("click", function() {
-    document.getElementById('section2').scrollIntoView({behavior: "smooth"})
-})
- document.getElementById('thirdbutton').addEventListener("click", function() {
-     document.getElementById('section3').scrollIntoView({behavior: "smooth"})
- })
-  document.getElementById('fourthbutton').addEventListener("click", function() {
-      document.getElementById('section4').scrollIntoView({behavior: "smooth"})
-  })
-
-// Build menu 
-
-
-// Set sections as active*/
-const addActiveClass =(navbar__menu) => {
-    section__container.class.addActiveClass("active");
-    
-}
-
+    // Set sections as active*/
+const addActiveClass = (navbar__menu) => {
+	section__container.class.addActiveClass("active");
+};
 //remove active sections
-const removeActiveClass =(navbar__menu) => {
-    section__container.removeActiveClass("active");
-}
+const removeActiveClass = (navbar__menu) => {
+	section__container.removeActiveClass("active");
+};
+
+
+//view state as active
+
