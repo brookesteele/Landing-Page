@@ -60,17 +60,7 @@ clickPage.addEventListener('click', function () {
 });
 
 //view state as active
-let inView = function (section) {
-    let box = section.getBoundingClientRect();
 
-    return(
-        box.top >= 0 &&
-        box.left >= 0 &&
-        box.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        box.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-};
-}
 
 //section events 
 
