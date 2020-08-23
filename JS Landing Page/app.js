@@ -24,7 +24,6 @@ const unorderedList = document.getElementsByTagName("li");
 function createNav(){
     for (let item of allSections){
         let menuitem = document.createElement("li");
-        let menuitem = document.createElement("a");
         menuitem.className="menu__link";
         menuitem.dataset.nav=item.id;
         menuitem.innerText=item.dataset.nav;
@@ -44,12 +43,15 @@ function createNav(){
 
     createNav()
     // Set sections as active*/
-const addActiveClass = (navbar__menu) => {
-	section__container.class.addActiveClass("active");
-};
-//remove active sections
-const removeActiveClass = (navbar__menu) => {
-	section__container.removeActiveClass("active");
+function myFunction 
+for (const section of sections) {
+    const box = section.getBoundingClientRect();
+    if(box.top <= 150 && box.bottom >= 150{
+        section.classList.add('your-active-class');
+    }else{
+        section.classList.remove('your-active-class');
+    }
+    }
 };
 
 
