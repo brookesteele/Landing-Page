@@ -57,7 +57,8 @@ for (const section of sections) {
 
 //event listeners 
 const clickPage = document.querySelector('body');
-clickPage.addEventListener('click', function () {
+clickPage.addEventListener('click', (e) =>{ 
+    e.preventDefault(scrollIntoView)
 
 });
 
