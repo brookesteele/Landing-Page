@@ -46,7 +46,7 @@ function createNav(){
 function myFunction 
 for (const section of sections) {
     const box = section.getBoundingClientRect();
-    if(box.top <= 150 && box.bottom >= 150{
+    if(box.top <= 150 && box.bottom >= 150) {
         section.classList.add('your-active-class');
     }else{
         section.classList.remove('your-active-class');
