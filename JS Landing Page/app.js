@@ -51,7 +51,7 @@ for (const section of sections) {
     }else{
         section.classList.remove('your-active-class');
     }
-    }
+  }
 };
 
 
