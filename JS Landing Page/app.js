@@ -65,5 +65,5 @@ clickPage.addEventListener('click', (e) =>{
 //view state as active
 
 
-//section events 
+
 
