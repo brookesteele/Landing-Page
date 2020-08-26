@@ -9,7 +9,8 @@ JavaScript
 
 Features:
 Dynamic Navigation, 
-Page Scrolling
+Page Scrolling,
+Active Class for each Section
 
 Company:
 Udacity 
