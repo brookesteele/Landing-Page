@@ -84,7 +84,7 @@ window.addEventListener('scroll' ,strawberryActivation);
 
 // Scroll to anchor ID using scrollTO event
 
-const scrollOnPage = () => {
+/*const scrollOnPage = () => {
  const link = document.querySelectorAll('.navbar__menu a');
  link.forEach(link => {
      link.addEventListener('click', () => {
@@ -92,7 +92,7 @@ const scrollOnPage = () => {
              sections[i].addEventListener('click', sectionScroll(link));
          }
      });
- });
+ }); */
 
 
 scrollOnPage();
