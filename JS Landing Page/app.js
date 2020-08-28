@@ -36,7 +36,6 @@ const sections = document.querySelectorAll('section');
 */
 
 // populate the nav
-
 const buildTheNav = () => {
 
     let navUI = '';
@@ -83,16 +82,15 @@ const strawberryActivation = () =>
 window.addEventListener('scroll' ,strawberryActivation);
 
 // Scroll to anchor ID using scrollTO event
-
-/*const scrollOnPage = () => {
+const scrollOnPage = () => {
  const grape = document.querySelectorAll('.navbar__menu');
- link.forEach(grape => {
+ grape.forEach(grape => {
      grape.addEventListener('click', () => {
          for(i = 0; i<sections; i++) {
-             sections[i].addEventListener('click', sectionScroll(link));
+             sections[i].addEventListener('click', sectionScroll(grape));
          }
      });
- }); */
+ }); 
 
 
 scrollOnPage();
