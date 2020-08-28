@@ -14,92 +14,64 @@
 */
 
 /**
- * Define Global Variables**/
-const navigation = document.getElementById('navbar__list');
-const sections = document.querySelectorAll('section');
+ * Define Global Variables */
+const navbar = document.getElementById("navbar__list");
+const allSections = document.querySelectorAll('section');
+const unorderedList = document.getElementsByTagName("li");
+/* End Global Variables*/
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
+//populate the navbar
+function createNav(){
+    for (let item of allSections){
+        let menuitem = document.createElement("li");
+        menuitem.className="menu__link";
+        menuitem.dataset.nav=item.id;
+        menuitem.innerText=item.dataset.nav;
 
+        // adding click event listener on Nav link
+        menuitem.addEventListener('click', function () {
+            item.scrollIntoView({behavior: "smooth"})
+        })
+        navbar.appendChild(menuitem);
+        //add ID
+        menuitem.id = sectionTitle;
+        menuitem.className = "navBar_list"
+        //add href
+        menuitem.appendChild(menuitem)
+        navbar.appendChild(menu);
+    }
 
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// populate the nav
-const buildTheNav = () => {
-
-    let navUI = '';
-    //loop sections
-    sections.forEach(section => {
-        const sectionID =section.id;
-        const sectionDataNav = section.dataset.nav;
+    createNav()
     
-        navUI += `<li><a class= "menu__link" href="#${sectionID}">Section</a></li>`;
-    });
-    //append elements 
-    navigation.innerHTML = navUI;
-}
-
-buildTheNav();
-
-// Add class 'active' to section when near top of viewport
-const banana = (section) => {
-    return Math.floor(section.getBoundingClientRect().top);
-};
-//remove active class
-const removeActiveClass = (section) => {
-    section.classList.remove('your-active-class');
-    section.style.cssText = "background-color: rgb(225, 153, 240);";
-};
-// add active class 
-const addActiveSection = (conditional, section) => {
-    if(conditional){
+    // Set sections as active/
+function myFunction 
+for (const section of sections) {
+    const box = section.getBoundingClientRect();
+    if (box.top <= 150 && box.bottom >= 150){       
         section.classList.add('your-active-class');
-        section.style.cssText = "background-color: rgb(236, 14, 125);";
-    };
-};
-// function
-const strawberryActivation = () => 
-    sections.forEach(section => {
-        const elementBanana = banana(section);
-    
-        inviewport = () => elementBanana < 150 && elementBanana >= -150;
+    } else {
+        section.classList.remove('your-active-class');
+    }
+  }
+}; 
+ 
+//event listeners 
+function newFunction() {
+    const clickPage = document.querySelector('body');
+    clickPage.addEventListener('click', (e) => {
+        e.preventDefault(scrollIntoView);
 
-        removeActiveClass(section);
-        addActiveSection(inviewport(),section);
-    
-});
-window.addEventListener('scroll' ,strawberryActivation);
-
-// Scroll to anchor ID using scrollTO event
-const scrollOnPage = () => {
- const grape = document.querySelectorAll('.navbar__menu');
- grape.forEach(grape => {
-     grape.addEventListener('click', () => {
-         for(i = 0; i<sections; i++) {
-             sections[i].addEventListener('click', sectionScroll(grape));
-         }
-     });
- }); 
-
-
-scrollOnPage();
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
+    });
 }
+//view state as active
+let inView = function (section) {
+    let box = section.getBoundingClientRect();
+
+    return(
+        box.top >= 0 &&
+        box.left >= 0 &&
+        box.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        box.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};  
+
